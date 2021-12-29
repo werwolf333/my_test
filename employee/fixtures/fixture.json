@@ -15,29 +15,29 @@
     "is_staff": true, "is_active": true, "date_joined": "2021-12-26T20:48:03.617Z", "groups": [], "user_permissions": []}},
 
     {"model": "employee.employee","pk": 1, "fields": {"user": 1, "name": "Mike", "surname": "Jordon",
-    "patronymic": "Mikov", "position": "general manager", "position_level": 0, "boss": null,
+    "patronymic": "Mikov", "position": "general manager", "boss": null,
     "employment_date": "2021-09-25", "salary": 1300.0 }},
 
     {"model": "employee.employee","pk": 2, "fields": {"user": 2, "name": "Tom", "surname": "Jordon",
-    "patronymic": "Mikov", "position": "top manager", "position_level": 1, "boss": null,
+    "patronymic": "Mikov", "position": "top manager", "boss": 1,
     "employment_date": "2021-09-25", "salary": 500.0 }},
 
     {"model": "employee.employee","pk": 3, "fields": {"user": 3, "name": "Tom2", "surname": "Jordon",
-    "patronymic": "Mikov", "position": "top manager", "position_level": 1, "boss": null,
+    "patronymic": "Mikov", "position": "top manager", "boss": 1,
     "employment_date": "2021-09-25", "salary": 500.0 }},
 
-    {"model": "employee.infopaidsalary", "pk": 1, "fields": {"employee": 1, "data_paid": "2021-09-26", "paid": 1000.0}},
-    {"model": "employee.infopaidsalary", "pk": 2, "fields": {"employee": 1, "data_paid": "2021-10-26", "paid": 1100.0}},
-    {"model": "employee.infopaidsalary", "pk": 3, "fields": {"employee": 1, "data_paid": "2021-11-26", "paid": 1200.0}},
-    {"model": "employee.infopaidsalary", "pk": 4, "fields": {"employee": 1, "data_paid": "2021-12-26", "paid": 1300.0}},
+    {"model": "employee.salary", "pk": 1, "fields": {"employee": 1, "data_paid": "2021-09-26", "paid": 1000.0}},
+    {"model": "employee.salary", "pk": 2, "fields": {"employee": 1, "data_paid": "2021-10-26", "paid": 1100.0}},
+    {"model": "employee.salary", "pk": 3, "fields": {"employee": 1, "data_paid": "2021-11-26", "paid": 1200.0}},
+    {"model": "employee.salary", "pk": 4, "fields": {"employee": 1, "data_paid": "2021-12-26", "paid": 1300.0}},
 
-    {"model": "employee.infopaidsalary", "pk": 5, "fields": {"employee": 2, "data_paid": "2021-09-26", "paid": 200.0}},
-    {"model": "employee.infopaidsalary", "pk": 6, "fields": {"employee": 2, "data_paid": "2021-10-26", "paid": 300.0}},
-    {"model": "employee.infopaidsalary", "pk": 7, "fields": {"employee": 2, "data_paid": "2021-11-26", "paid": 400.0}},
-    {"model": "employee.infopaidsalary", "pk": 8, "fields": {"employee": 2, "data_paid": "2021-12-26", "paid": 500.0}},
+    {"model": "employee.salary", "pk": 5, "fields": {"employee": 2, "data_paid": "2021-09-26", "paid": 200.0}},
+    {"model": "employee.salary", "pk": 6, "fields": {"employee": 2, "data_paid": "2021-10-26", "paid": 300.0}},
+    {"model": "employee.salary", "pk": 7, "fields": {"employee": 2, "data_paid": "2021-11-26", "paid": 400.0}},
+    {"model": "employee.salary", "pk": 8, "fields": {"employee": 2, "data_paid": "2021-12-26", "paid": 500.0}},
 
-    {"model": "employee.infopaidsalary", "pk": 9, "fields": {"employee": 3, "data_paid": "2021-09-26", "paid": 200.0}},
-    {"model": "employee.infopaidsalary", "pk": 10, "fields": {"employee": 3, "data_paid": "2021-10-26", "paid": 300.0}},
-    {"model": "employee.infopaidsalary", "pk": 11, "fields": {"employee": 3, "data_paid": "2021-11-26", "paid": 400.0}},
-    {"model": "employee.infopaidsalary", "pk": 12, "fields": {"employee": 3, "data_paid": "2021-12-26", "paid": 500.0}}
+    {"model": "employee.salary", "pk": 9, "fields": {"employee": 3, "data_paid": "2021-09-26", "paid": 200.0}},
+    {"model": "employee.salary", "pk": 10, "fields": {"employee": 3, "data_paid": "2021-10-26", "paid": 300.0}},
+    {"model": "employee.salary", "pk": 11, "fields": {"employee": 3, "data_paid": "2021-11-26", "paid": 400.0}},
+    {"model": "employee.salary", "pk": 12, "fields": {"employee": 3, "data_paid": "2021-12-26", "paid": 500.0}}
 ]

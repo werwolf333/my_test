@@ -10,8 +10,7 @@ class Employee(models.Model):
     surname = models.CharField(max_length=20, verbose_name="surname")
     patronymic = models.CharField(max_length=20, verbose_name="patronymic")
     position = models.CharField(max_length=20, verbose_name="position")
-    position_level = models.IntegerField()
-    boss = models.ForeignKey("self", blank=True, null=True, related_name='workers', on_delete=models.SET_NULL)
+    boss = models.ForeignKey("self", blank=True, null=True, related_name='workers', on_delete=models.CASCADE)
     employment_date = models.DateField(verbose_name="employment_date")
     salary = models.FloatField(verbose_name="salary")
 
@@ -23,11 +22,11 @@ class Employee(models.Model):
             return format_html("<a href=%s/change/>%s</a>" % (self.id, self.boss), self.boss)
 
     def all_paid_salary(self):
-        all_paid = InfoPaidSalary.objects.filter(employee=self).aggregate(Sum('paid'))
+        all_paid = Salary.objects.filter(employee=self).aggregate(Sum('paid'))
         return all_paid['paid__sum']
 
 
-class InfoPaidSalary(models.Model):
+class Salary(models.Model):
     employee = models.ForeignKey(Employee, related_name='men', on_delete=models.CASCADE)
     data_paid = models.DateField(verbose_name="data_paid")
     paid = models.FloatField(verbose_name="paid", blank=True, null=True)

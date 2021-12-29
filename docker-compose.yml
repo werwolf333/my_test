@@ -14,12 +14,12 @@ services:
             - pg_data:/var/lib/postgresql/data
 
     
-    aplication:
+    application:
         build: .
         ports: 
             - 8888:8000 
         volumes: 
-            - .:/code    
+            - .:/code
     
         command: python manage.py runserver 0.0.0.0:8000 
         depends_on:
